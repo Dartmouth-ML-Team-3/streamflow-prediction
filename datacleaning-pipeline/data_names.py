@@ -1,0 +1,20 @@
+huc = {
+    "01":"New England",
+    "02": "Mid-Atlantic",
+    "03": "South Atlantic-Gulf",
+    "04": "Great Lakes",
+    "05": "Ohio",
+    "06": "Tennessee",
+    "07": "Upper Mississippi",
+    "08": "Lower Mississippi",
+    "09:": "Souris-Red-Rainy",
+    "10": "Missouri",
+    "11": "Arkansas-White-Red",
+    "12": "Texas-Gulf",
+    "13": "Rio Grande",
+    "14": "Upper Colorado",
+    "15": "Lower Colorado",
+    "16": "Great Basin",
+    "17": "Pacific Northwest",
+    "18": "California"
+}
