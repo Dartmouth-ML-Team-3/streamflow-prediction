@@ -21,4 +21,4 @@ Owner: JJ. scikit-learn `RandomForestRegressor` predicting log(1 + runoff mm/day
 | High-flow recall | 0.206 | 0.070 |
 | High-flow precision | 0.585 | 0.160 |
 
-Top feature importances: mean_precip_mm_day 0.28, tmax 0.22, dayl 0.15, prcp 0.08. The forest tracks ordinary days but clips flood peaks and drops too fast after storms, the expected weakness of a model with no memory of previous days' rain. Per basin, it does best on high snow-fed basins (above 1,500 m, NSE 0.6–0.75, a regular melt cycle) and worst on the 800–1,400 m band (0.2–0.4) where rain and snow mix; one basin near 2,060 m scores −2.1.
+Top feature importances: mean_precip_mm_day 0.28, tmax 0.22, dayl 0.15, prcp 0.08. The forest tracks ordinary days but clips flood peaks and drops too fast after storms, the expected weakness of a model with no memory of previous days' rain. Per basin, it does best on high snow-fed basins (above 1,500 m, NSE 0.6–0.75, a regular melt cycle) and worst on the 800–1,400 m band (0.2–0.4) where rain and snow mix; the one failure (NSE −2.1) is 13161500, the semi-arid Bruneau River, scored on a drought after its wettest training year.
