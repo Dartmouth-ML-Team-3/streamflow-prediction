@@ -83,4 +83,5 @@ Result: `tmin` (VIF 18.5; corr 0.90 with `vp`, 0.87 with `tmax`) and `mean_temp_
 | File | Tracked? |
 |---|---|
 | `clean_data.ipynb`, `make_model_dataset.py`, `feature_selection.ipynb`, `data_names.py` | yes |
+| `pnw_model_dataset.csv.gz` (21 MB) | yes: the final model dataset, gzipped. Load it directly: `pd.read_csv("pnw_model_dataset.csv.gz", dtype={"gauge_id": str}, parse_dates=["date"])`. Recommit only when the dataset changes. |
 | `pnw_dataset.csv` (195 MB), `pnw_model_dataset.csv` (110 MB) | no, over GitHub's limit; regenerate with the two steps above |
