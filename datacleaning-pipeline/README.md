@@ -78,7 +78,7 @@ Correlation heatmap and variance inflation factors (VIF) for the 13 candidate in
 
 Result: `tmin` (VIF 18.5; corr 0.90 with `vp`, 0.87 with `tmax`) and `mean_temp_c` (corr −0.90 with `elevation_m`, which has twice its target correlation) are dropped. The largest remaining VIF is 5.5. Final inputs: 11. The decision is the default in `make_model_dataset.py`; `--drop` with nothing after it keeps all 13.
 
-The notebook also writes two of the paper's figures to `../figures/` (PNG and PDF, 300 dpi):
+The paper's figures live in `../figures/`. `fig1_pipeline.png` is the hand-drawn pipeline diagram (Figure 1; no code generates it). The notebook writes the next two (PNG and PDF, 300 dpi):
 
 - `fig3_correlation`: the 13-input correlation heatmap above, dropped inputs labelled in orange.
 - `fig2_basin_map`: all 91 region-17 gauges, with the 82 modelled basins, the 8 area-error basins and the 1 short-record basin marked. State outlines come from `us_states.geojson` (US Census cartographic boundaries via the PublicaMundi MappingAPI repository).
