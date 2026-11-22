@@ -78,10 +78,17 @@ Correlation heatmap and variance inflation factors (VIF) for the 13 candidate in
 
 Result: `tmin` (VIF 18.5; corr 0.90 with `vp`, 0.87 with `tmax`) and `mean_temp_c` (corr −0.90 with `elevation_m`, which has twice its target correlation) are dropped. The largest remaining VIF is 5.5. Final inputs: 11. The decision is the default in `make_model_dataset.py`; `--drop` with nothing after it keeps all 13.
 
+The notebook also writes two of the paper's figures to `../figures/` (PNG and PDF, 300 dpi):
+
+- `fig3_correlation`: the 13-input correlation heatmap above, dropped inputs labelled in orange.
+- `fig2_basin_map`: all 91 region-17 gauges, with the 82 modelled basins, the 8 area-error basins and the 1 short-record basin marked. State outlines come from `us_states.geojson` (US Census cartographic boundaries via the PublicaMundi MappingAPI repository).
+
+The notebook needs `pnw_dataset.csv` from stage 1 in this folder, because the two dropped inputs are no longer in the model dataset.
+
 ## Files
 
 | File | Tracked? |
 |---|---|
-| `clean_data.ipynb`, `make_model_dataset.py`, `feature_selection.ipynb`, `data_names.py` | yes |
+| `clean_data.ipynb`, `make_model_dataset.py`, `feature_selection.ipynb`, `data_names.py`, `us_states.geojson` | yes |
 | `pnw_model_dataset.csv.gz` (21 MB) | yes: the final model dataset, gzipped. Load it directly: `pd.read_csv("pnw_model_dataset.csv.gz", dtype={"gauge_id": str}, parse_dates=["date"])`. Recommit only when the dataset changes. |
 | `pnw_dataset.csv` (195 MB), `pnw_model_dataset.csv` (110 MB) | no, over GitHub's limit; regenerate with the two steps above |
