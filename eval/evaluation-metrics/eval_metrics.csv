@@ -1,0 +1,8 @@
+,Base LSTM,256x2 LSTM,128x1 LSTM
+NSE pooled,0.796,0.785,0.811
+NSE per-basin median,0.77,0.786,0.799
+KGE pooled,0.867,0.892,0.881
+KGE per-masin median,0.798,0.833,0.823
+RMSE mm/day,2.761,2.836,2.661
+high-flow recall,0.607,0.611,0.626
+high-flow precision,0.617,0.659,0.687
